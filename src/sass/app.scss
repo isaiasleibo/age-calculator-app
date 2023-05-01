@@ -1,0 +1,166 @@
+#root {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background-color: #f0f0f0;
+    user-select: none;
+}
+
+#ageCalculatorContainer {
+    width: 550px;
+    background-color: white;
+    padding: 50px;
+    padding-bottom: 70px;
+    border-radius: 16px;
+    border-bottom-right-radius: 150px;
+
+    header {
+        display: flex;
+        margin-bottom: 30px;
+
+        .InputError {
+            p {
+                color: #d46b6c;
+            }
+
+            input {
+                margin-bottom: 5px;
+                border: 1px solid #e1c4c3;
+            }
+
+            .errorText {
+                letter-spacing: normal;
+                font-size: 10px;
+                font-style: italic;
+                font-weight: 700;
+                margin-bottom: 0;
+            }
+        }
+
+        div {
+            margin: 0 16px;
+
+            p {
+                font-size: 12px;
+                letter-spacing: 2px;
+                color: #6d6d6d;
+                margin-bottom: 3px;
+            }
+
+            input {
+                all: unset;
+                border: 1px solid #e5e5e5;
+                width: 100px;
+                height: 30px;
+                padding: 10px;
+                border-radius: 4px;
+                font-size: 24px;
+            }
+
+            input::-webkit-outer-spin-button,
+            input::-webkit-inner-spin-button {
+                display: none;
+            }
+        }
+    }
+
+    #arrowInput {
+        position: relative;
+
+        div {
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            width: 52px;
+            height: 52px;
+            background-color: #864cff;
+            padding: 5px;
+            border-radius: 50%;
+            position: absolute;
+            right: 0;
+            top: 0;
+            bottom: 0;
+            margin: auto;
+            cursor: pointer;
+
+            svg {
+                scale: 0.7;
+            }
+        }
+    }
+
+    #infoContainer {
+        font-size: 50px;
+        font-weight: 800;
+        font-style: italic;
+        margin-top: 20px;
+
+        h2 {
+            height: 80px;
+            color: #161616;
+
+            span {
+                color: #874cff;
+            }
+        }
+    }
+}
+
+@media screen and (max-width: 730px) {
+    #ageCalculatorContainer {
+        width: calc(100% - 100px - 40px);
+
+        header {
+            width: fit-content;
+            margin: 0 auto;
+        }
+
+        #arrowInput {
+            margin-top: 60px;
+            div {
+                left: 0;
+            }
+        }
+    }
+}
+
+@media screen and (max-width: 580px) {
+    #ageCalculatorContainer {
+        padding: 30px 30px 50px;
+        width: calc(100% - 60px - 40px);
+
+        header {
+            width: 100%;
+
+            div {
+                width: calc(33.33% - 20px) !important;
+                margin: 0 10px;
+
+                input {
+                    width: calc(100% - 20px);
+                    font-size: 18px;
+                }
+            }
+        }
+    }
+
+    #infoContainer {
+        font-size: 40px !important;
+
+        h2 {
+            height: 66px !important;
+        }
+    }
+    
+}
+
+@media screen and (max-width: 440px) {
+    #infoContainer {
+        font-size: 30px !important;
+        margin-top: 30px !important;
+
+        h2 {
+            height: 50px !important;
+        }
+    }
+}
