@@ -19,7 +19,6 @@ function App() {
   function calcularEdad(fechaNacimiento) {
     var hoy = new Date();
     var fechaNac = new Date(fechaNacimiento);
-    console.log(fechaNac);
     var edad = hoy.getFullYear() - fechaNac.getFullYear();
     var mes = hoy.getMonth() - fechaNac.getMonth();
 
@@ -59,9 +58,8 @@ function App() {
     const year = inputYear.current.value;
     let returnBoolean = false;
 
-    if (ageObject.fechaNac === "Invalid Date" || year < 0 || day.length !== 2 || month.length !== 2 || year.length !== 4) {
+    if (isNaN(ageObject.fechaNac) || year < 0 || day.length !== 2 || month.length !== 2 || year.length !== 4) {
       setErrorD("Must be a valid Date");
-      console.log(1)
       returnBoolean = true;
       setErrorDayClass("InputError");
       setErrorMonthClass("InputError");
