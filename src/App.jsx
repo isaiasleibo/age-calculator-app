@@ -21,7 +21,6 @@ function App() {
     var hoy = new Date();
     var fechaNac = new Date(fechaNacimiento);
     console.log(fechaNac);
-    const currentYear = hoy.getFullYear();
     var edad = hoy.getFullYear() - fechaNac.getFullYear();
     var mes = hoy.getMonth() - fechaNac.getMonth();
 
@@ -61,7 +60,7 @@ function App() {
     const year = inputYear.current.value;
     let returnBoolean = false;
 
-    if (ageObject.fechaNac == "Invalid Date" || year < 0 || day.length !== 2 || month.length !== 2 || year.length !== 4) {
+    if (ageObject.fechaNac === "Invalid Date" || year < 0 || day.length !== 2 || month.length !== 2 || year.length !== 4) {
       setErrorD("Must be a valid Date");
       console.log(1)
       returnBoolean = true;
@@ -69,17 +68,17 @@ function App() {
       setErrorMonthClass("InputError");
       setErrorYearClass("InputError");
     }
-    if (day == "") {
+    if (day === "") {
       setErrorDayClass("InputError");
       setErrorD("This field is required");
       returnBoolean = true;
     }
-    if (month == "") {
+    if (month === "") {
       setErrorMonthClass("InputError");
       setErrorM("This field is required");
       returnBoolean = true;
     }
-    if (year == "") {
+    if (year === "") {
       setErrorYearClass("InputError");
       setErrorY("This field is required");
       returnBoolean = true;
