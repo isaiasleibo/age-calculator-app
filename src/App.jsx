@@ -1,7 +1,6 @@
 import React, { useRef, useState } from 'react';
 import './css/app.css';
 import { IconArrow } from './img/icon-arrow';
-import { act } from 'react-dom/test-utils';
 
 function App() {
   const inputDay = useRef();
